@@ -26,16 +26,16 @@ class NineAxisSensorDriver():
                 self.device.write(bytes([constant.PMU_LPW, 0x20]))          # DEEP_SUSPEND mode
             # ジャイロセンサ
             with I2CDevice(self.i2c, constant.BMX055_GYR) as self.device:
-                self.device.write(bytes([constant.GYR_LPM1,0x20]))          # DEEP_SUSPEND mode
+                self.device.write(bytes([constant.GYR_LPM1, 0x20]))          # DEEP_SUSPEND mode
             # 地磁気センサ
             with I2CDevice(self.i2c, constant.BMX055_MAG) as self.device:
-                self.device.write(bytes([constant.MAG_CTRL,0x00]))          # Suspend mode
+                self.device.write(bytes([constant.MAG_CTRL, 0x00]))          # Suspend mode
             # 気圧センサ
             with I2CDevice(self.i2c, constant.LPS22HB) as self.device:
                 self.device.write(bytes([constant.CTRL_REG1, 0x00]))        # Power-down mode
             # 温湿度センサ
             with I2CDevice(self.i2c, constant.HDC2010) as self.device:
-                self.device.write(bytes([constant.RESET_AND_DRDY,0x80]))    # Soft-Reset
+                self.device.write(bytes([constant.RESET_AND_DRDY, 0x80]))    # Soft-Reset
 
 
     # @brief 加速度センサ値の読み込み
