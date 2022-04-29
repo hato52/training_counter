@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Training Counter: bluetooth_driver.py ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Training Counter
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4db3a2f7aa3a8b9901e70dfeb2571af9.html">driver</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">bluetooth_driver.py</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="bluetooth__driver_8py.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacebluetooth__driver.html">    1</a></span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">import</span> struct</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">import</span> adafruit_ble</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">from</span> adafruit_ble.advertising.standard <span class="keyword">import</span> ProvideServicesAdvertisement</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">from</span> adafruit_ble.services.nordic <span class="keyword">import</span> UARTService</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classbluetooth__driver_1_1BluetoothDriver.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html">BluetoothDriver</a>():</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classbluetooth__driver_1_1BluetoothDriver.html#a54e864e1d11ffd04f2f6a5370199a456">   27</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#a54e864e1d11ffd04f2f6a5370199a456">__init__</a>(self):</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classbluetooth__driver_1_1BluetoothDriver.html#ae819874e03dbd7456fd0b44d473d3ecb">   28</a></span>&#160;        self.<a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#ae819874e03dbd7456fd0b44d473d3ecb">ble</a> = adafruit_ble.BLERadio()</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classbluetooth__driver_1_1BluetoothDriver.html#ab3eac52aa5de59f3a54830d3f675f1e2">   29</a></span>&#160;        self.<a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#ab3eac52aa5de59f3a54830d3f675f1e2">uart_service</a> = UARTService()</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classbluetooth__driver_1_1BluetoothDriver.html#a7d3f2ff076d67f2984307816b74976bd">   30</a></span>&#160;        self.<a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#a7d3f2ff076d67f2984307816b74976bd">advertisement</a> = ProvideServicesAdvertisement(self.<a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#ab3eac52aa5de59f3a54830d3f675f1e2">uart_service</a>)</div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classbluetooth__driver_1_1BluetoothDriver.html#afd6cf28e3aa771703ddd08ef11f86c23">   31</a></span>&#160;        self.<a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#afd6cf28e3aa771703ddd08ef11f86c23">scan_response</a> = adafruit_ble.Advertisement()</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        self.<a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#afd6cf28e3aa771703ddd08ef11f86c23">scan_response</a>.complete_name = <span class="stringliteral">&quot;Smart Dumbbell&quot;</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    </div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classbluetooth__driver_1_1BluetoothDriver.html#a272eb1a4348568d33ba208d67daaae45">   41</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#a272eb1a4348568d33ba208d67daaae45">start_advertise</a>(self):</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        self.<a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#ae819874e03dbd7456fd0b44d473d3ecb">ble</a>.start_advertising(self.<a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#a7d3f2ff076d67f2984307816b74976bd">advertisement</a>, self.<a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#afd6cf28e3aa771703ddd08ef11f86c23">scan_response</a>)</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div><div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classbluetooth__driver_1_1BluetoothDriver.html#a5fb71dea7816b7d734b453efe7e16655">   51</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#a5fb71dea7816b7d734b453efe7e16655">stop_advertise</a>(self):</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        self.<a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#ae819874e03dbd7456fd0b44d473d3ecb">ble</a>.stop_advertising()</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div><div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classbluetooth__driver_1_1BluetoothDriver.html#a46d2f4a9bb9b3683add6314c239725d0">   61</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#a46d2f4a9bb9b3683add6314c239725d0">is_connected</a>(self):</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> self.<a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#ae819874e03dbd7456fd0b44d473d3ecb">ble</a>.connected:</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">True</span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">else</span>:</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">False</span></div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div><div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classbluetooth__driver_1_1BluetoothDriver.html#a9df32895f3e68149a3cee6f0f6e48846">   74</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#a9df32895f3e68149a3cee6f0f6e48846">send</a>(self, data):</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        self.<a class="code" href="classbluetooth__driver_1_1BluetoothDriver.html#ab3eac52aa5de59f3a54830d3f675f1e2">uart_service</a>.write(struct.pack(<span class="stringliteral">&quot;@B&quot;</span>, data))</div><div class="ttc" id="classbluetooth__driver_1_1BluetoothDriver_html_a7d3f2ff076d67f2984307816b74976bd"><div class="ttname"><a href="classbluetooth__driver_1_1BluetoothDriver.html#a7d3f2ff076d67f2984307816b74976bd">bluetooth_driver.BluetoothDriver.advertisement</a></div><div class="ttdeci">advertisement</div><div class="ttdef"><b>Definition:</b> <a href="bluetooth__driver_8py_source.html#l00030">bluetooth_driver.py:30</a></div></div>
+<div class="ttc" id="classbluetooth__driver_1_1BluetoothDriver_html_afd6cf28e3aa771703ddd08ef11f86c23"><div class="ttname"><a href="classbluetooth__driver_1_1BluetoothDriver.html#afd6cf28e3aa771703ddd08ef11f86c23">bluetooth_driver.BluetoothDriver.scan_response</a></div><div class="ttdeci">scan_response</div><div class="ttdef"><b>Definition:</b> <a href="bluetooth__driver_8py_source.html#l00031">bluetooth_driver.py:31</a></div></div>
+<div class="ttc" id="classbluetooth__driver_1_1BluetoothDriver_html_a5fb71dea7816b7d734b453efe7e16655"><div class="ttname"><a href="classbluetooth__driver_1_1BluetoothDriver.html#a5fb71dea7816b7d734b453efe7e16655">bluetooth_driver.BluetoothDriver.stop_advertise</a></div><div class="ttdeci">def stop_advertise(self)</div><div class="ttdoc">Advertiseの停止 </div><div class="ttdef"><b>Definition:</b> <a href="bluetooth__driver_8py_source.html#l00051">bluetooth_driver.py:51</a></div></div>
+<div class="ttc" id="classbluetooth__driver_1_1BluetoothDriver_html"><div class="ttname"><a href="classbluetooth__driver_1_1BluetoothDriver.html">bluetooth_driver.BluetoothDriver</a></div><div class="ttdoc">Bluetooth通信用ドライバ </div><div class="ttdef"><b>Definition:</b> <a href="bluetooth__driver_8py_source.html#l00019">bluetooth_driver.py:19</a></div></div>
+<div class="ttc" id="classbluetooth__driver_1_1BluetoothDriver_html_a9df32895f3e68149a3cee6f0f6e48846"><div class="ttname"><a href="classbluetooth__driver_1_1BluetoothDriver.html#a9df32895f3e68149a3cee6f0f6e48846">bluetooth_driver.BluetoothDriver.send</a></div><div class="ttdeci">def send(self, data)</div><div class="ttdoc">送信処理 </div><div class="ttdef"><b>Definition:</b> <a href="bluetooth__driver_8py_source.html#l00074">bluetooth_driver.py:74</a></div></div>
+<div class="ttc" id="classbluetooth__driver_1_1BluetoothDriver_html_ae819874e03dbd7456fd0b44d473d3ecb"><div class="ttname"><a href="classbluetooth__driver_1_1BluetoothDriver.html#ae819874e03dbd7456fd0b44d473d3ecb">bluetooth_driver.BluetoothDriver.ble</a></div><div class="ttdeci">ble</div><div class="ttdef"><b>Definition:</b> <a href="bluetooth__driver_8py_source.html#l00028">bluetooth_driver.py:28</a></div></div>
+<div class="ttc" id="classbluetooth__driver_1_1BluetoothDriver_html_a54e864e1d11ffd04f2f6a5370199a456"><div class="ttname"><a href="classbluetooth__driver_1_1BluetoothDriver.html#a54e864e1d11ffd04f2f6a5370199a456">bluetooth_driver.BluetoothDriver.__init__</a></div><div class="ttdeci">def __init__(self)</div><div class="ttdoc">コンストラクタ </div><div class="ttdef"><b>Definition:</b> <a href="bluetooth__driver_8py_source.html#l00027">bluetooth_driver.py:27</a></div></div>
+<div class="ttc" id="classbluetooth__driver_1_1BluetoothDriver_html_a46d2f4a9bb9b3683add6314c239725d0"><div class="ttname"><a href="classbluetooth__driver_1_1BluetoothDriver.html#a46d2f4a9bb9b3683add6314c239725d0">bluetooth_driver.BluetoothDriver.is_connected</a></div><div class="ttdeci">def is_connected(self)</div><div class="ttdoc">接続確立の判断 </div><div class="ttdef"><b>Definition:</b> <a href="bluetooth__driver_8py_source.html#l00061">bluetooth_driver.py:61</a></div></div>
+<div class="ttc" id="classbluetooth__driver_1_1BluetoothDriver_html_ab3eac52aa5de59f3a54830d3f675f1e2"><div class="ttname"><a href="classbluetooth__driver_1_1BluetoothDriver.html#ab3eac52aa5de59f3a54830d3f675f1e2">bluetooth_driver.BluetoothDriver.uart_service</a></div><div class="ttdeci">uart_service</div><div class="ttdef"><b>Definition:</b> <a href="bluetooth__driver_8py_source.html#l00029">bluetooth_driver.py:29</a></div></div>
+<div class="ttc" id="classbluetooth__driver_1_1BluetoothDriver_html_a272eb1a4348568d33ba208d67daaae45"><div class="ttname"><a href="classbluetooth__driver_1_1BluetoothDriver.html#a272eb1a4348568d33ba208d67daaae45">bluetooth_driver.BluetoothDriver.start_advertise</a></div><div class="ttdeci">def start_advertise(self)</div><div class="ttdoc">Advertiseの開始 </div><div class="ttdef"><b>Definition:</b> <a href="bluetooth__driver_8py_source.html#l00041">bluetooth_driver.py:41</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

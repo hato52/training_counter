@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Training Counter: button_driver.py ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Training Counter
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4db3a2f7aa3a8b9901e70dfeb2571af9.html">driver</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">button_driver.py</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="button__driver_8py.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacebutton__driver.html">    1</a></span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">import</span> board</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">from</span> digitalio <span class="keyword">import</span> DigitalInOut, Direction, Pull</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">from</span> utils <span class="keyword">import</span> constant</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classbutton__driver_1_1ButtonDriver.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbutton__driver_1_1ButtonDriver.html">ButtonDriver</a>():</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classbutton__driver_1_1ButtonDriver.html#af79072dbc0dd5a86a8103e8bf2d94434">   26</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classbutton__driver_1_1ButtonDriver.html#af79072dbc0dd5a86a8103e8bf2d94434">__init__</a>(self):</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classbutton__driver_1_1ButtonDriver.html#ab50d1b986eb3f429eba664d9cac1f7e3">   27</a></span>&#160;        self.<a class="code" href="classbutton__driver_1_1ButtonDriver.html#ab50d1b986eb3f429eba664d9cac1f7e3">button1</a> = DigitalInOut(board.BUTTON1)</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        self.<a class="code" href="classbutton__driver_1_1ButtonDriver.html#ab50d1b986eb3f429eba664d9cac1f7e3">button1</a>.direction = Direction.INPUT</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        self.<a class="code" href="classbutton__driver_1_1ButtonDriver.html#ab50d1b986eb3f429eba664d9cac1f7e3">button1</a>.pull = Pull.UP</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classbutton__driver_1_1ButtonDriver.html#aca73c748bc26135bba94914bea18eaff">   30</a></span>&#160;        self.<a class="code" href="classbutton__driver_1_1ButtonDriver.html#aca73c748bc26135bba94914bea18eaff">prev_state</a> = constant.BTN_UP</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        </div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classbutton__driver_1_1ButtonDriver.html#a8e556ce438089a50e246fc3115397cf5">   39</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classbutton__driver_1_1ButtonDriver.html#a8e556ce438089a50e246fc3115397cf5">is_button1_pressed</a>(self):</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        res = <span class="keyword">False</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">if</span> self.<a class="code" href="classbutton__driver_1_1ButtonDriver.html#ab50d1b986eb3f429eba664d9cac1f7e3">button1</a>.value == constant.BTN_DOWN:     <span class="comment"># ボタンが押されている</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            res = <span class="keyword">True</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> res</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div><div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classbutton__driver_1_1ButtonDriver.html#a3c7106ad7797e2f4d076b9fb807dbd4f">   52</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classbutton__driver_1_1ButtonDriver.html#a3c7106ad7797e2f4d076b9fb807dbd4f">is_button1_hitted</a>(self):</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        res = <span class="keyword">False</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">if</span> self.<a class="code" href="classbutton__driver_1_1ButtonDriver.html#ab50d1b986eb3f429eba664d9cac1f7e3">button1</a>.value == constant.BTN_DOWN <span class="keywordflow">and</span> self.<a class="code" href="classbutton__driver_1_1ButtonDriver.html#aca73c748bc26135bba94914bea18eaff">prev_state</a> == constant.BTN_UP:</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            res = <span class="keyword">True</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        self.<a class="code" href="classbutton__driver_1_1ButtonDriver.html#aca73c748bc26135bba94914bea18eaff">prev_state</a> = self.<a class="code" href="classbutton__driver_1_1ButtonDriver.html#ab50d1b986eb3f429eba664d9cac1f7e3">button1</a>.value    </div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> res</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div><div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classbutton__driver_1_1ButtonDriver.html#a646202a559d03eb873c229d4b1ca00d3">   66</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classbutton__driver_1_1ButtonDriver.html#a646202a559d03eb873c229d4b1ca00d3">is_button1_released</a>(self):</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        res = <span class="keyword">False</span></div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">if</span> self.<a class="code" href="classbutton__driver_1_1ButtonDriver.html#ab50d1b986eb3f429eba664d9cac1f7e3">button1</a>.value == constant.BTN_UP <span class="keywordflow">and</span> self.<a class="code" href="classbutton__driver_1_1ButtonDriver.html#aca73c748bc26135bba94914bea18eaff">prev_state</a> == constant.BTN_DOWN:</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            res = <span class="keyword">True</span></div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        self.<a class="code" href="classbutton__driver_1_1ButtonDriver.html#aca73c748bc26135bba94914bea18eaff">prev_state</a> = self.<a class="code" href="classbutton__driver_1_1ButtonDriver.html#ab50d1b986eb3f429eba664d9cac1f7e3">button1</a>.value    </div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> res</div><div class="ttc" id="classbutton__driver_1_1ButtonDriver_html_ab50d1b986eb3f429eba664d9cac1f7e3"><div class="ttname"><a href="classbutton__driver_1_1ButtonDriver.html#ab50d1b986eb3f429eba664d9cac1f7e3">button_driver.ButtonDriver.button1</a></div><div class="ttdeci">button1</div><div class="ttdef"><b>Definition:</b> <a href="button__driver_8py_source.html#l00027">button_driver.py:27</a></div></div>
+<div class="ttc" id="classbutton__driver_1_1ButtonDriver_html_af79072dbc0dd5a86a8103e8bf2d94434"><div class="ttname"><a href="classbutton__driver_1_1ButtonDriver.html#af79072dbc0dd5a86a8103e8bf2d94434">button_driver.ButtonDriver.__init__</a></div><div class="ttdeci">def __init__(self)</div><div class="ttdoc">コンストラクタ </div><div class="ttdef"><b>Definition:</b> <a href="button__driver_8py_source.html#l00026">button_driver.py:26</a></div></div>
+<div class="ttc" id="classbutton__driver_1_1ButtonDriver_html_aca73c748bc26135bba94914bea18eaff"><div class="ttname"><a href="classbutton__driver_1_1ButtonDriver.html#aca73c748bc26135bba94914bea18eaff">button_driver.ButtonDriver.prev_state</a></div><div class="ttdeci">prev_state</div><div class="ttdef"><b>Definition:</b> <a href="button__driver_8py_source.html#l00030">button_driver.py:30</a></div></div>
+<div class="ttc" id="classbutton__driver_1_1ButtonDriver_html_a8e556ce438089a50e246fc3115397cf5"><div class="ttname"><a href="classbutton__driver_1_1ButtonDriver.html#a8e556ce438089a50e246fc3115397cf5">button_driver.ButtonDriver.is_button1_pressed</a></div><div class="ttdeci">def is_button1_pressed(self)</div><div class="ttdoc">ボタン1の押下判定 </div><div class="ttdef"><b>Definition:</b> <a href="button__driver_8py_source.html#l00039">button_driver.py:39</a></div></div>
+<div class="ttc" id="classbutton__driver_1_1ButtonDriver_html"><div class="ttname"><a href="classbutton__driver_1_1ButtonDriver.html">button_driver.ButtonDriver</a></div><div class="ttdoc">ボタン用ドライバ </div><div class="ttdef"><b>Definition:</b> <a href="button__driver_8py_source.html#l00018">button_driver.py:18</a></div></div>
+<div class="ttc" id="classbutton__driver_1_1ButtonDriver_html_a646202a559d03eb873c229d4b1ca00d3"><div class="ttname"><a href="classbutton__driver_1_1ButtonDriver.html#a646202a559d03eb873c229d4b1ca00d3">button_driver.ButtonDriver.is_button1_released</a></div><div class="ttdeci">def is_button1_released(self)</div><div class="ttdoc">ボタン1が離されたタイミングの判定 </div><div class="ttdef"><b>Definition:</b> <a href="button__driver_8py_source.html#l00066">button_driver.py:66</a></div></div>
+<div class="ttc" id="classbutton__driver_1_1ButtonDriver_html_a3c7106ad7797e2f4d076b9fb807dbd4f"><div class="ttname"><a href="classbutton__driver_1_1ButtonDriver.html#a3c7106ad7797e2f4d076b9fb807dbd4f">button_driver.ButtonDriver.is_button1_hitted</a></div><div class="ttdeci">def is_button1_hitted(self)</div><div class="ttdoc">ボタン1が押下されたタイミングの判定 </div><div class="ttdef"><b>Definition:</b> <a href="button__driver_8py_source.html#l00052">button_driver.py:52</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
