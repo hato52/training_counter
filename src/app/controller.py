@@ -119,6 +119,7 @@ class Controller():
     # @return   None 戻り値なし
     # @details  初期化時処理を行う
     def initialize(self):
+        self._training_cnt = 0
         self.sensor.initialize()
         self.led.LED_red_on()
         self.ble.start_advertise()
